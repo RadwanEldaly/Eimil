@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bank - Responsive</title>
+  <style>
+    /* reset / base */
+    * { box-sizing: border-box; }
+    html,body { height:100%; }
+    body {
+      margin:0;
+      padding:16px;
+      background:#f4f4f4;
+      font-family: Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:#222;
+    }
+
+    /* container */
+    .container {
+      width:100%;
+      max-width:760px;
+      margin:0 auto;
+      background:#fff;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    /* header */
+    .header {
+      background:#0047ff;
+      color:#fff;
+      text-align:center;
+      padding:24px;
+    }
+    .header img { display:block; margin:0 auto 10px; max-width:110px; height:auto; }
+    .header h1 { margin:0 0 8px; font-size:22px; }
+    .header p { margin:0; font-size:14px; opacity:0.95; line-height:1.4; }
+
+    /* content */
+    .content { padding:18px; }
+    .card { background:transparent; margin-bottom:16px; }
+    .section-title { font-size:18px; margin:0 0 5vh; }
+
+    /* two column area (becomes column on small screens) */
+    .two-col { display:flex; gap:14px; align-items:flex-start; }
+    .col-left { flex:1; }
+    .col-right { flex:0 0 180px; max-width:180px; }
+    .col-right img { width:100%; height:auto; border-radius:12px; display:block; }
+
+    /* offer image */
+    .offer-img { display:block; margin:10px auto; max-width:520px; width:80%; border-radius:10px; }
+
+    /* button */
+    .btn { display:inline-block; background:#0047ff; color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:700; margin-top:12px; }
+
+    /* table responsiveness: allow horizontal scroll on small screens */
+    .table-wrap { overflow:auto; -webkit-overflow-scrolling:touch; margin-top:8px; }
+    table.offer-table { width:100%; border-collapse:collapse; min-width:600px; }
+    table.offer-table th, table.offer-table td {
+      text-align:center; padding:10px; border:1px solid #e9e9e9; font-size:14px;
+    }
+    table.offer-table th { background:#f2f2f2; }
+
+    /* footer */
+    .footer {
+      background:#1253df; color:#fff; text-align:center; padding:18px; font-size:13px;
+      border-radius:0 0 12px 12px;
+    }
+    .footer img { max-width:90px; display:block; margin:10px auto; }
+
+    /* MEDIA QUERIES */
+    @media (max-width:600px) {
+      .col-right { max-width:140px; flex:0 0 140px; }
+      table.offer-table { min-width:520px; }
+      .header h1 { font-size:20px; }
+      .header p { font-size:13px; }
+    }
+
+    @media (max-width:420px) {
+      body { padding:8px; }
+      .container { border-radius:8px; }
+      .two-col { flex-direction:column; }
+      .col-right { flex:0 0 auto; max-width:100%; }
+      .offer-img { width:100%; max-width:100%; }
+      .btn { display:block; width:100%; text-align:center; }
+      table.offer-table { min-width:480px; }
+      table.offer-table th, table.offer-table td { padding:8px; font-size:12px; }
+    }
+
+    @media (max-width:380px) {
+      .content { padding:12px; }
+      .header { padding:14px; }
+      .header h1 { font-size:17px; }
+      .header p { font-size:12px; }
+      .section-title { font-size:15px; }
+      table.offer-table { min-width:420px; }
+      table.offer-table th, table.offer-table td { padding:6px; font-size:11px; }
+      .btn { font-size:14px; padding:10px; }
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <div class="container">
+    <header class="header">
+      <img src="img/Logo (1).svg" alt="logo">
+      <h1>Hello, Mohamed</h1>
+      <p>Our Machinery breakdown insurance delivers insurance cover for plant, machinery and mechanical equipment at work, during downtime or throughout maintenance operations.</p>
+    </header>
+
+    <main class="content">
+      <!-- about + image -->
+      <section class="card">
+        <h2 class="section-title">Special offer this week for you!</h2>
+        <div class="two-col">
+          <div class="col-left">
+            <h3 style="margin-top:0">About our program</h3>
+            <p style="font-weight:500; color:#000; line-height:1.4;">
+              You can now unlock the cash in your controls. No need for days of paperwork or ongoing admin — with Contact Finance you can access a sizeable amount of recurring revenue upfront.
+            </p>
+            <p style="font-weight:500; color:#000; line-height:1.4;">
+              Protection against late payments or project delays — access your cash with long-established records of funding contractual debt.
+            </p>
+          </div>
+          <div class="col-right">
+            <img src="img/Download premium png of PNG Middle eastern man in Arab Sheik portrait smiling people by audi about young arab man, sheik, arab man, arab, and muslim 13822084.jpeg" alt="person">
+          </div>
+        </div>
+      </section>
+
+      <!-- promo + CTA -->
+      <section class="card" style="text-align:center;">
+        <h2 class="section-title">Special offer in this week only for you</h2>
+        <img class="offer-img" src="img/develop-ios-and-android-mobile-apps-using-flutter.png" style="width: 100%;" alt="offers" />
+        <h3 style="text-align:left; font-size:20px; margin:10px 0;">Do you want more discounts?</h3>
+        <p style="text-align:left; font-size:15px; line-height:1.4;">
+          Accepted worldwide at over 30 million outlets and 900,000+ ATMs — make your payments by simply waving or tapping your card on the POS terminal.
+        </p>
+        <a href="https://www.alrajhibank.com.sa/en/personal/accounts/apply" class="btn">Apply Now</a>
+      </section>
+
+      <!-- Offer Features -->
+      <section class="card" style="text-align:left;">
+        <h2 class="section-title">Offer Features</h2>
+
+        <p><strong>Option A:</strong></p>
+        <div class="table-wrap">
+          <table class="offer-table" role="table" aria-label="Option A">
+            <thead>
+              <tr>
+                <th>Net Monthly Salary</th>
+                <th>Get Credit Card</th>
+                <th>Earn Mokafaa Reward (SAR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SAR 10,000 – SAR 19,999</td><td>New Credit Card (Signature-Free for Life)</td><td>SAR 500</td></tr>
+              <tr><td>SAR 20,000 – SAR 39,999</td><td>New Credit Card (Signature-Free for Life)</td><td>SAR 2,000</td></tr>
+              <tr><td>SAR 40,000 – SAR 59,999</td><td>New Credit Card (Infinite-Free for Life)</td><td>SAR 4,000</td></tr>
+              <tr><td>SAR 60,000+</td><td>New Credit Card (Infinite-Free for Life)</td><td>SAR 6,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:14px;"><strong>Option B:</strong></p>
+        <div class="table-wrap">
+          <table class="offer-table" role="table" aria-label="Option B">
+            <thead>
+              <tr>
+                <th>Net Monthly Salary</th>
+                <th>Get Credit Card</th>
+                <th>Get Financing</th>
+                <th>Earn Mokafaa Reward (SAR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>SAR 10,000 – SAR 19,999</td><td>New Credit Card (Signature-Free for Life)</td><td>—</td><td>SAR 1,000</td></tr>
+              <tr><td>SAR 20,000 – SAR 39,999</td><td>New Credit Card (Signature-Free for Life)</td><td>Personal Finance OR Auto Loan OR Mortgage</td><td>SAR 3,000</td></tr>
+              <tr><td>SAR 40,000 – SAR 59,999</td><td>New Credit Card (Infinite-Free for Life)</td><td>Personal Finance OR Auto Loan OR Mortgage</td><td>SAR 5,000</td></tr>
+              <tr><td>SAR 60,000+</td><td>New Credit Card (Infinite-Free for Life)</td><td>Personal Finance OR Auto Loan OR Mortgage</td><td>SAR 7,500</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      Refer your friends and family and get rewarded SAR 250 in Mokafaa points when they use your referral code.
+      <img src="img/Logo (1).svg" alt="logo">
+      <div style="opacity:0.95; margin-top:6px; font-size:13px;">
+        This email was sent from a notification-only email address that cannot accept incoming notifications. Please do not reply to this message.
+        <br>&copy; 2024 Al Rajhi Bank. All rights reserved.
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
